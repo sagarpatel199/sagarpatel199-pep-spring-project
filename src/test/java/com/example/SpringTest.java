@@ -3,7 +3,7 @@ package com.example;
 import com.example.controller.SocialMediaController;
 import com.example.entity.Account;
 import com.example.entity.Message;
-import com.example.repository.AccountRepository;
+import com.example.repository.AccountRepositorymp;
 import com.example.repository.MessageRepository;
 import com.example.service.AccountService;
 import com.example.service.MessageService;
@@ -74,7 +74,7 @@ public class SpringTest {
      */
     @Test
     public void getAccountRepositoryBean(){
-        AccountRepository bean = applicationContext.getBean(AccountRepository.class);
+        AccountRepositorymp bean = applicationContext.getBean(AccountRepositorymp.class);
         Assertions.assertNotNull(bean);
     }
     /**
@@ -92,7 +92,7 @@ public class SpringTest {
      */
     @Test
     public void accountRepositoryIsRepositoryTest() throws ReflectiveOperationException {
-        AccountRepository repository = applicationContext.getBean(AccountRepository.class);
+        AccountRepositorymp repository = applicationContext.getBean(AccountRepositorymp.class);
         Method[] repositoryMethods = repository.getClass().getMethods();
         Method saveMethod = null;
         Method findAllMethod = null;
